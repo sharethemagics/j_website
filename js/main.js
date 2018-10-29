@@ -381,7 +381,26 @@
 			isPause,
 			tick,
 			percentTime;
+		var rotation = 0;
 
+		$("#main-slider").css({
+			"margin-top": $("#main-menu").outerHeight()
+		});
+		jQuery.fn.rotate = function (degrees) {
+			$(this).css({
+				'-webkit-transform': 'rotate(' + degrees + 'deg)',
+				'-moz-transform': 'rotate(' + degrees + 'deg)',
+				'-ms-transform': 'rotate(' + degrees + 'deg)',
+				'transform': 'rotate(' + degrees + 'deg)'
+			});
+			return $(this);
+		};
+
+		$('.nb-form').hover(function () {
+			console.log('rotate')
+			rotation += 180;
+			$('.arrow').rotate(rotation);
+		});
 		//Init the carousel
 		$("#main-slider").find('.owl-carousel').owlCarousel({
 			slideSpeed: 500,
