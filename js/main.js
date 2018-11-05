@@ -125,8 +125,8 @@
 			}
 
 		}, {
-			offset: '85%'
-		});
+				offset: '85%'
+			});
 		// }, { offset: '90%'} );
 	};
 
@@ -160,8 +160,8 @@
 			}
 
 		}, {
-			offset: '85%'
-		});
+				offset: '85%'
+			});
 		// }, { offset: '90%'} );
 	};
 
@@ -172,7 +172,7 @@
 
 			var $this = $(this);
 			$this
-				.find('.dropdown')
+				.find('.drop')
 				.css('display', 'block')
 				.addClass('animated-fast fadeInUpMenu');
 
@@ -180,7 +180,7 @@
 			var $this = $(this);
 
 			$this
-				.find('.dropdown')
+				.find('.drop')
 				.css('display', 'none')
 				.removeClass('animated-fast fadeInUpMenu');
 		});
@@ -347,8 +347,8 @@
 					$(this.element).addClass('animated');
 				}
 			}, {
-				offset: '90%'
-			});
+					offset: '90%'
+				});
 		}
 	};
 	new UISearch(document.getElementById('sb-search'));
@@ -357,7 +357,7 @@
 	$(function () {
 		var $this = $(this);
 		$this
-			.find('.dropdown')
+			.find('.drop')
 			.css('display', 'none');
 		mobileMenuOutsideClick();
 		offcanvasMenu();
@@ -383,9 +383,7 @@
 			percentTime;
 		var rotation = 0;
 
-		$("#main-slider").css({
-			"margin-top": $("#main-menu").outerHeight()
-		});
+
 		jQuery.fn.rotate = function (degrees) {
 			$(this).css({
 				'-webkit-transform': 'rotate(' + degrees + 'deg)',
